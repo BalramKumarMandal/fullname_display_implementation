@@ -7,7 +7,9 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent the form from submitting and refreshing the page
-    setFullName(`${firstName} ${lastName}`);
+    // Trim spaces and ensure correct formatting
+    const formattedFullName = `${firstName.trim()} ${lastName.trim()}`;
+    setFullName(formattedFullName);
   };
 
   return (
@@ -36,7 +38,7 @@ function App() {
         </div>
         <button type="submit">Submit</button>
       </form>
-      {fullName && <div>Full Name :{fullName}</div>}
+      {fullName && <div>Full Name: {fullName}</div>}
     </div>
   );
 }
