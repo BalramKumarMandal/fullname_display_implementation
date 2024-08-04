@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Show Full Name</h1>
+      <h1>Full Name Display:</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="firstName">First Name:</label>
@@ -38,7 +38,7 @@ function App() {
       </form>
       {fullName && (
         <div>
-          <h2>Full Name:</h2>
+          <h2>Full Name</h2>
           <p>{fullName}</p>
         </div>
       )}
